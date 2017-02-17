@@ -1,0 +1,243 @@
+body {
+  padding-top: 48px;
+  font-family: "Roboto", sans-serif;
+  background: #F5F5F5;
+}
+
+a {
+  color: #4584EE;
+}
+
+.google__logo {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGgAAAAoCAMAAAAlmk//AAAAflBMVEUAAAA0qFNChfRChfRChfRChfRChfTsUDFChfRChfTqQzXqQzVChfTqQzXqQzXqQzVChfTqQzX7vAXqQzVChfT7vAX7vAX7vAXqQzX7vAX7vAVChfTqQzVChfTqQzX7vAXqQzX7vAXqQzX7vAXqQzU0qFNChfTqQzX7vAU0qFPmKNI6AAAAJnRSTlMAv78ef0XwF5zPYO9gQpm/b97wf9+dZtrPvkczM65vJa5/UTMlOmbv7OIAAALNSURBVFjD7ZbbcqMwDIZVwGDOISEkIZDzkvT9X3Aty1hO2exeZNiZzvS/gbq2P/+SLAI/el9CxoOSJ/fwnn4pwUtl9WDlvYf6+Pz8gBfytRnWYibQviYnQRBIQmazgPwQ9w5881c/DHIeR2gidPKSyXlylCHHB1dzgChwAuYEsSEP/gNI/t3Q4VTdq9Mh4pFmvXksd+eje9froZYCVNUKF5Sc0ntV5EAKVYZeYi7VnZQmQLpuHqTleYy9N94+rF0GdePagk75FDmPleGR7qyEOMuH1Zo43FOeQHlql26nIF6BgznOKpM8KfHlov5/RM6mads1ks72ckgh5DMoSmntBdeu/gHCOQcAY61Sz7U10irk8ki1FPtjVTFohTEDFO5yo73rSehCBHVqxglIhbYUoZ+xJtR7owzxJQxcUGoi1hUpWjLWJ9dVxV3qQ3VAuukDtrQ5SVnagT9ww/IdUEdZpaDfSww71cooXrLQLuwQToezArXjyA7dCbcDxwzKEbRKdcEWN9p00oEILqD8I+jogB4aJGzgXZDRNoncG9tPulJN+bSzdL4a19EGQyfceIQTUJF/bXbSHYjp25fY20PvB7jqoiMd6T3kohVOjiKMmdtPbF16Nnr7WFcsXYWU5kYV1Si2hauJHLmTnKTYrbqTWmDsFEXEKUFTmdpcZP1gkkaxq3B2vsUwmJpeNugHOTuT4iEYOxGDcm0J67XATdgTiz+D0faOqLLSWY3A3FjVUjf6cbWnDL34awsqdMWVW/3obLg8pnAYkUQiDpFIxCGSkRs6IqGIwxL96KYXwEoqmrqyeW03pqXaEUGn7PXtYxDk5fNaZokgEIbC6pLVoQNXx+bctM/3IQtUgv3Jl+12WSU5Y96V75T3HuaSH9S1IfX4CZ1B3LKlPxaFhDnEbSQMFoGubx/m0z4crDKYUfzjJBQws4T0Yq9f+PCjb63fxmmAhQtfgbgAAAAASUVORK5CYII=) no-repeat 5px 3px;
+  width: 130px;
+  height: 40px;
+  display: inline-block;
+}
+
+.card-block {
+  padding: 1rem;
+  background: white;
+}
+
+#search {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-color: transparent;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: inline;
+  margin: 0;
+}
+
+#GoogleSearch input {
+  border-radius: 0;
+  border-color: #D7D7D7;
+  width: 475px;
+  background: white;
+}
+#GoogleSearch input:focus {
+  border-color: #4584EE;
+}
+#GoogleSearch button {
+  color: white;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAABGUlEQVQoFXWSsU4CQRCGOYwJgeY64gsY3oOSUBMfwwegMCZQmthQ2NJR0FDT2NlQU9jYWICERCUKyPr9ZIcct7eTfJnZf/6ZvctdqeTDOdeEOexBsYUXuDZPYcZwBxYrilf48sIfuRMb1I0K3dTKmjh34QB6mnq2d6wR9aiKdtBEQH86dp0bB30a2voRNLxArwq6fZH3lBEuYJ1v2DlJkg31HqqmWdbwDsL38Q5uVO8SPr10ShqeQQ1T96SeFyN/nJ7LnBhqgD6H3msAFZnIV/AMCn2JNBj2xhua9nNoicwWvxQTWEIvtqCeMX1Tv8MQUngDi0HhgpjI1K1N+vwY8xbqDPVzCx4KjTGR4V5mwSHmi+oM34O+zs8/o2lHs8MgV+EAAAAASUVORK5CYII=) no-repeat 50% 50% #4584EE;
+  border-color: #4584EE;
+  border-radius: 0 2px 2px 0;
+  width: 60px;
+  cursor: pointer;
+}
+#GoogleSearch button:hover {
+  background-color: #5890f0;
+}
+
+.sites {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.site {
+  font-size: 1.3rem;
+  background: white;
+  border-radius: 4px;
+  width: 188px;
+  height: 120px;
+  margin: 1rem;
+  line-height: 120px;
+  text-align: center;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+  color: #4584EE;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+.site span {
+  font-family: FontAwesome;
+  padding-right: 5px;
+  font-size: 50px;
+}
+.site span:nth-child(2) {
+  display: none;
+}
+.site img {
+  mix-blend-mode: multiply;
+}
+.site:nth-child(3n) {
+  page-break-after: always;
+}
+.site:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.15) 0%, transparent 80%);
+  background: -webkit-radial-gradient(center ellipse, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 80%);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
+}
+.site:hover, .site:focus, .site:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  text-decoration: none;
+  color: #4584EE;
+}
+.site:hover:before, .site:focus:before, .site:active:before {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+#Google {
+  background: #4584EE;
+  color: white;
+}
+#Google span:after {
+  content: '\f1a0';
+}
+
+#Facebook {
+  background: #3B5999;
+  color: white;
+}
+#Facebook span:after {
+  content: '\f230';
+}
+
+#YouTube {
+  background: #E62117;
+  color: white;
+}
+#YouTube span:after {
+  content: '\f167';
+}
+
+#GitHub {
+  background: #111;
+  color: white;
+}
+#GitHub span:after {
+  content: '\f09b';
+}
+
+#Wikipedia {
+  background: white;
+  color: black;
+}
+#Wikipedia span:after {
+  content: '\f266';
+}
+
+#Reddit {
+  background: #F4400B;
+  color: white;
+}
+#Reddit span:after {
+  content: '\f281';
+}
+
+#Instagram {
+  color: white;
+  background: -webkit-radial-gradient(circle farthest-corner at 35% 90%, #fec564, rgba(0, 0, 0, 0) 50%), -webkit-radial-gradient(circle farthest-corner at 0 140%, #fec564, rgba(0, 0, 0, 0) 50%), -webkit-radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, rgba(0, 0, 0, 0) 50%), -webkit-radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, rgba(0, 0, 0, 0) 50%), -webkit-radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, rgba(0, 0, 0, 0) 50%), -webkit-radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, rgba(0, 0, 0, 0) 50%), -webkit-radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, rgba(0, 0, 0, 0)), -webkit-linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, rgba(0, 0, 0, 0) 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, rgba(0, 0, 0, 0) 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, rgba(0, 0, 0, 0) 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, rgba(0, 0, 0, 0) 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, rgba(0, 0, 0, 0) 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, rgba(0, 0, 0, 0) 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, rgba(0, 0, 0, 0)), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+}
+#Instagram span:after {
+  content: '\f16d';
+}
+
+#Imgur {
+  background: #2B2B2B;
+  color: #1BB76E;
+}
+#Imgur span:after {
+  content: '\f111';
+}
+
+#Amazon {
+  background: #0B0C07;
+  color: #F99A05;
+}
+#Amazon span:after {
+  content: '\f270';
+}
+
+#Codepen {
+  background: black;
+  color: white;
+}
+#Codepen span:after {
+  content: '\f1cb';
+}
+
+#jsFiddle {
+  background: #3FA1F5;
+  color: white;
+}
+#jsFiddle span:after {
+  content: '\f1cc';
+}
+
+#Codepad {
+  background: #F35E5C;
+  color: white;
+}
+#Codepad span:after {
+  content: '';
+  background: url("https://codepad.co/img/loader-logo.svg") no-repeat;
+  -webkit-filter: invert(1) brightness(2);
+          filter: invert(1) brightness(2);
+  width: 50px;
+  height: 50px;
+  top: 45px;
+  right: 68px;
+  position: absolute;
+}

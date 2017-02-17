@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Start Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div class="fluid-container">
+	<div class="d-flex justify-content-center">
+		<div class="card" id="search">
+      	<div class="card-block">
+         	<div class="d-flex justify-content-center">
+					
+          		<div class="google__logo"></div>
+					<!-- remove target="_blank" if you don't want to open your search in a new tab -->
+					<form method="get" action="https://www.google.com/search" class="form-search" target="_blank">
+						<div class="input-group" id="GoogleSearch">
+							<input type="text" name="q" placeholder="Search the web"class="form-control input-lg" autocomplete="off" style="padding-left: 10px">
+							<span class="input-group-btn">
+								<button class="btn btn-secondary" type="submit"></button>
+							</span>
+						</div>
+					</form>
+					
+        		</div>
+      	</div>
+    	</div>
+  	</div>
+	<div class="sites">
+		<!-- Remove the second set of span tags to show the name, remove the first to hide the icon -->
+		<!-- I've opted to not include popovers to make this as minimal as possible but if you want to
+           add your own, check out Baloon.css https://github.com/kazzkiq/balloon.css or simply add
+           title tags to your sites -->
+		<a class="site" href="https://google.com" id="Google"><span></span><span>Google</span></a>
+		<a class="site" href="https://facebook.com" id="Facebook"><span></span><span>Facebook</span></a>
+		<a class="site" href="https://github.com" id="GitHub"><span></span><span>GitHub</span></a>
+		<a class="site" href="https://youtube.com" id="YouTube"><span></span><span>YouTube</span></a>
+		<a class="site" href="https://reddit.com" id="Reddit"><span></span><span>Reddit</span></a>
+		<a class="site" href="https://wikipedia.org" id="Wikipedia"><span></span><span>Wikipedia</span></a>
+		<a class="site" href="https://instagram.com" id="Instagram"><span></span><span>Instagram</span></a>
+		<a class="site" href="https://imgur.com" id="Imgur"><span></span><span>Imgur</span></a>
+		<a class="site" href="https://amazon.com" id="Amazon"><span></span><span>Amazon</span></a>
+		<a class="site" href="https://jsfiddle.net" id="jsFiddle"><span></span><span>jsFiddle</span></a>
+		<a class="site" href="https://codepen.io" id="Codepen"><span></span><span>Codepen</span></a>
+		<a class="site" href="https://codepad.co" id="Codepad"><span></span><span>Codepad</span></a>
+	</div>
+</div>
+  
+    <script src="js/index.js"></script>
+
+</body>
+</html>
