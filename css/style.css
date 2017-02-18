@@ -64,6 +64,9 @@ form {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.sites .hidden {
+  display: none;
+}
 
 .site {
   font-size: 1.3rem;
@@ -210,6 +213,14 @@ form {
   content: '\f270';
 }
 
+#ProductHunt {
+  background: #DA552F;
+  color: white;
+}
+#ProductHunt span:after {
+  content: '\f288';
+}
+
 #Codepen {
   background: black;
   color: white;
@@ -240,4 +251,125 @@ form {
   top: 45px;
   right: 68px;
   position: absolute;
+}
+
+#Apple {
+  background: #050505;
+  color: white;
+}
+#Apple span:after {
+  content: '\f179';
+}
+
+#Behance {
+  background: #1769FF;
+  color: white;
+}
+#Behance span:after {
+  content: '\f1b5';
+}
+
+#Dribbble {
+  background: #E84C88;
+  color: white;
+}
+#Dribbble span:after {
+  content: '\f17d';
+}
+
+#ChromeStore {
+  background: #34A853;
+  color: white;
+}
+#ChromeStore span:after {
+  content: '\f268';
+}
+
+#Dribbble {
+  background: #E84C88;
+  color: white;
+}
+#Dribbble span:after {
+  content: '\f17d';
+}
+
+#Dropbox {
+  background: #007EE5;
+  color: white;
+}
+#Dropbox span:after {
+  content: '\f16b';
+}
+
+#Flickr {
+  background: #0063DC;
+  color: white;
+}
+#Flickr span:after {
+  content: '\f16e';
+}
+
+#FirefoxAddons {
+  background: #C13832;
+  color: white;
+}
+#FirefoxAddons span:after {
+  content: '\f269';
+}
+
+#Medium {
+  background: #00AB6C;
+  color: white;
+}
+#Medium span:after {
+  content: '\f23a';
+}
+
+#Pinterest {
+  background: #BD081C;
+  color: white;
+}
+#Pinterest span:after {
+  content: '\f0d2';
+}
+
+#Snapchat {
+  background: #FFFC00;
+  color: white;
+}
+#Snapchat span:after {
+  content: '\f2ab';
+  text-shadow: 0 0 1px #000;
+}
+
+#Spotify {
+  background: #2EBD59;
+  color: white;
+}
+#Spotify span:after {
+  content: '\f1bc';
+}
+
+#Slack {
+  background: #6ECADC;
+  color: white;
+}
+#Slack span:after {
+  content: '\f198';
+}
+
+#Twitch {
+  background: #6441A5;
+  color: white;
+}
+#Twitch span:after {
+  content: '\f1e8';
+}
+
+#Quora {
+  background: #A82400;
+  color: white;
+}
+#Quora span:after {
+  content: '\f2c4';
 }
