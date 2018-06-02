@@ -1,74 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 
 <head>
   <meta charset="UTF-8">
   <title>Start Page</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500|Product+Sans:300,400,500|Material+Icons'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
 </head>
 
 <body>
-  <div class="fluid-container">
-    <div class="d-flex justify-content-center">
-      <div class="card" id="search">
-        <div class="card-block">
-          <div class="d-flex justify-content-center">
-            <div class="google__logo"></div>
-            <!-- remove target="_blank" if you don't want to open your search in a new tab -->
-            <form method="get" action="https://www.google.com/search" class="form-search" target="_blank">
-              <div class="input-group" id="GoogleSearch">
-                <input type="text" name="q" placeholder="Search the web" class="form-control input-lg" autocomplete="off">
-                <span class="input-group-btn"><button class="btn btn-secondary" type="submit"></button></span>
-              </div>
-            </form>
+
+  
+<div class="menu-wrapper">
+  <div class="menu"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/icon--menu.svg"/>
+    <ul>
+            <li><a href="https://images.google.com">Images</a></li>
+            <li><a href="https://calendar.google.com">Calendar</a></li>
+            <li><a href="https://drive.google.com">Drive</a></li>
+            <li><a href="https://photos.google.com">Photos</a></li>
+            <li><a href="https://news.google.com">News</a></li>
+    </ul>
+  </div>
+</div>
+<div class="fluid-container">
+  <div class="d-flex justify-content-center" id="top">
+    <div class="col-2"><span class="google-logo"></span><a href="https://www.google.com"></a></div>
+    <div class="col-6">
+      <div id="search">
+        <form class="form-search w-100" method="get" action="https://www.google.com/search" target="_blank">
+          <div class="input-group" id="GoogleSearch">
+            <input class="form-control input-lg" type="search" name="q" placeholder="" autocomplete="off"/><span class="input-group-btn">
+              <button class="btn btn-secondary" type="submit"></button></span>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="sites">
-      <!-- Remove the second set of span tags to show the name, remove the first to hide the icon -->
-      <!-- I've opted to not include popovers to make this as minimal as possible but if you want to
-	           add your own, check out Baloon.css https://github.com/kazzkiq/balloon.css or simply add
-	           title tags to your sites -->
-      <a class="site" href="https://google.com" id="Google"><span></span><span>Google</span></a>
-      <a class="site" href="https://facebook.com" id="Facebook"><span></span><span>Facebook</span></a>
-      <a class="site" href="https://github.com" id="GitHub"><span></span><span>GitHub</span></a>
-      <a class="site" href="https://youtube.com" id="YouTube"><span></span><span>YouTube</span></a>
-      <a class="site" href="https://reddit.com" id="Reddit"><span></span><span>Reddit</span></a>
-      <a class="site" href="https://instagram.com" id="Instagram"><span></span><span>Instagram</span></a>
-      <a class="site" href="https://producthunt.com" id="ProductHunt"><span></span><span>Product Hunt</span></a>
-      <a class="site" href="https://imgur.com" id="Imgur"><span></span><span>Imgur</span></a>
-      <a class="site" href="https://amazon.com" id="Amazon"><span></span><span>Amazon</span></a>
-      <a class="site" href="https://jsfiddle.net" id="jsFiddle"><span></span><span>jsFiddle</span></a>
-      <a class="site" href="https://codepen.io" id="Codepen"><span></span><span>Codepen</span></a>
-      <a class="site" href="https://codepad.co" id="Codepad"><span></span><span>Codepad</span></a>
-      <a class="site" href="https://slack.com" id="Slack"><span></span><span>Slack</span></a>
-      <a class="site" href="https://twitch.tv" id="Twitch"><span></span><span>Twitch</span></a>
-      <a class="site" href="https://quora.com" id="Quora"><span></span><span>Quora</span></a>
-      <!-- Hidden -->
-      <div class="hidden">
-        <a class="site" href="https://wikipedia.org" id="Wikipedia"><span></span><span>Wikipedia</span></a>
-        <a class="site" href="https://apple.com" id="Apple"><span></span><span>Apple</span></a>
-        <a class="site" href="https://behance.net" id="Behance"><span></span><span>Behance</span></a>
-        <a class="site" href="https://dribbble.com" id="Dribbble"><span></span><span>Dribbble</span></a>
-        <a class="site" href="https://goo.gl/CJzpdp" id="ChromeStore"><span></span><span>Codepad</span></a>
-        <a class="site" href="https://dropbox.com" id="Dropbox"><span></span><span>Dropbox</span></a>
-        <a class="site" href="https://dropbox.com" id="Flickr"><span></span><span>Flickr</span></a>
-        <a class="site" href="https://goo.gl/b3vy7p" id="FirefoxAddons"><span></span><span>Firefox Addons</span></a>
-        <a class="site" href="https://medium.com" id="Medium"><span></span><span>Medium</span></a>
-        <a class="site" href="https://pinterest.com" id="Pinterest"><span></span><span>Pinterest</span></a>
-        <a class="site" href="https://snapchat.com" id="Snapchat"><span></span><span>Snapchat</span></a>
-        <a class="site" href="https://spotify.com" id="Spotify"><span></span><span>Spotify</span></a>
+        </form>
       </div>
     </div>
   </div>
-  <script src="js/index.js"></script>
+  <div class="sites"><a id="Instagram" href="https://instagram.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--instagram.svg"/><span id="title">Instagram</span></a><a id="Twitter" href="https://twitter.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--twitter.svg"/><span id="title">Twitter</span></a><a id="YouTube" href="https://youtube.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--youtube.svg"/><span id="title">YouTube</span></a><a id="CodePen" href="https://codepen.io"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--codepen-white.svg"/><span id="title">CodePen</span></a>
+    <!--+app('Facebook',
+    'facebook.com',
+    'facebook.svg')
+    
+    -->
+    <!--+app('Messenger',
+    'messenger.com',
+    'messenger.svg')
+    
+    --><a id="Inbox" href="https://inbox.google.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--inbox.svg"/><span id="title">Inbox</span></a><a id="GitHub" href="https://github.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--github.svg"/><span id="title">GitHub</span></a><a id="Reddit" href="https://reddit.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--reddit.svg"/><span id="title">Reddit</span></a><a id="Keep" href="https://keep.google.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--keep.svg"/><span id="title">Keep</span></a><a id="Imgur" href="https://imgur.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--imgur.svg"/><span id="title">Imgur</span></a>
+    <!--+app('Behance',
+    'behance.net',
+    'behance.svg')
+    
+    --><a id="ProductHunt" href="https://producthunt.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--producthunt.svg"/><span id="title">Product Hunt</span></a><a id="YouTubeMusic" href="https://music.youtube.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--youtube-music.svg"/><span id="title">YouTube Music</span></a><a id="ChromeStore" href="https://https://goo.gl/CJzpdp"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--chromestore.svg"/><span id="title">Chrome Store</span></a><a id="Dribbble" href="https://dribbble.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--dribbble.svg"/><span id="title">Dribbble</span></a>
+    <!--+app('Instapaper',
+    'instapaper.com',
+    'instapaper.svg')
+    
+    -->
+    <!--+app('Flipboard',
+    'flipboard.com',
+    'flipboard.svg')
+    
+    --><a id="Hulu" href="https://hulu.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--hulu.svg"/><span id="title">Hulu</span></a><a id="Netflix" href="https://netflix.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--netflix.svg"/><span id="title">Netflix</span></a>
+    <!--+app('Feedly',
+    'feedly.com',
+    'feedly.svg')
+    
+    --><a id="Vimeo" href="https://vimeo.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--vimeo.svg"/><span id="title">Vimeo</span></a><a id="Hangouts" href="https://hangouts.google.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--hangouts.svg"/><span id="title">Hangouts</span></a><a id="Medium" href="https://medium.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--medium.svg"/><span id="title">Medium</span></a><a id="GoogleMusic" href="https://music.google.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--googleplay.svg"/><span id="title">Google Music</span></a>
+    <!--+app('Google',
+    'google.com',
+    'google-icon.svg')
+    
+    -->
+    <!--+app('Slack',
+    'slack.com',
+    'slack.svg')
+    
+    --><a id="Amazon" href="https://amazon.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--amazon.svg"/><span id="title">Amazon</span></a><a id="Twitch" href="https://twitch.tv"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--twitch.svg"/><span id="title">Twitch</span></a><a id="Dropbox" href="https://dropbox.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--dropbox.svg"/><span id="title">Dropbox</span></a>
+    <!--+app('Wikipedia',
+    'wikipedia.org',
+    'wikipedia.svg')
+    
+    -->
+    <!--+app('Apple',
+    'apple.com',
+    'apple.svg')
+    
+    -->
+    <!--+app('Pinterest',
+    'pinterest.com',
+    'pinterest.svg')
+    
+    --><a id="Spotify" href="https://open.spotify.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--spotify.svg"/><span id="title">Spotify</span></a>
+    <!--+app('LinkedIn',
+    'linkedin.com',
+    'linkedin.svg')
+    
+    -->
+    <!--+app('Heroku',
+    'heroku.com',
+    'heroku.svg')
+    
+    -->
+    <!--+app('JSFiddle',
+    'jsfiddle.net',
+    'jsfiddle.svg')
+    
+    --><a id="Quora" href="https://quora.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--quora.svg"/><span id="title">Quora</span></a><a id="Pocket" href="https://getpocket.com"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--pocket.svg"/><span id="title">Pocket</span></a>
+    <!--+app('Bootstrap',
+    'getbootstrap.com',
+    'bootstrap.svg')
+    
+    -->
+    <!--+app('Opera Addons',
+    'addons.opera.com',
+    'opera.svg')
+    -->
+  </div>
+</div>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
 </body>
 
 </html>

@@ -1,405 +1,456 @@
-$blue: #4584EE;
-$blue2: lighten($blue, 4%);
-$gray: #D7D7D7;
-$gray2: #F5F5F5;
-$white: #FEFEFE;
-$boxshadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1), 0 2px 8px hsla(0, 0%, 0%, 0.2);
-//settings
-$background: $gray2;
-$search-background: white;
-$fontfamily: 'Roboto', sans-serif;
+// This only supports Webkit right now
+
+// Variables
+//--------------------
+
+$blue: #4584ee;
+$blue-2: lighten($blue, 4%);
+$gray: #d7d7d7;
+$gray-2: #f5f5f5;
+$bg: #fff;
+$link-color: #4584ee;
+$search-bg: #fff;
+$box-shadow: 0 0 0 1px rgba(black, 0.1), 0 2px 8px rgba(black, 0.2);
+$label-color: #bbb;
+$label-shadow: 0 0 2px rgba(white, 0.0);
+$label-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+$label-weight: 400;
+$label-size: 16px;
+
+// Brand Colors
+$Amazon:#0b0c07;$AmericanExpress:#2e77bc;$Apple:#999;$Basecamp:#66cc66;$Behance:#1769ff;$Bing:#008373;$Bitbucket:#205081;$Bitcoin:#f7931a;$Bitly:#ee6123;$Blogger:#f38936;$Bootstrap:#563d7c;$Buffer:#323b43;$ChromeStore:#e3e4e5;$Codepen:#181818;$Delicious:#3399ff;$DeviantArt:#05cc47;$Digg:#000;$Discover:#ff6000;$Disqus:#2e9fff;$Docker:#1488c6;$Dribbble:#e84c88;$Dropbox:#007ee5;$Ebay:#e53238;$Ello:#000;$Etsy:#F45800;$Evernote:#2dbe60;$Facebook:#3b5998;$Feedly:#6cc655;$Firefox:#c13832;$FitBit:#00b0b9;$Flickr:#0063dc;$Flipboard:#df272e;$Foursquare:#f94877;$FreeCodeCamp:#006600;$Git:#f14e32;$GitHub:#25292e;$Gitlab:#e24329;$Gitter:#ff0064;$Gmail:#d14836;$Goodreads:#663300;$Google:#4285F4;$GoogleAnalytics:#ffc107;$GoogleDrive:#4386fc;$GoogleHangouts:#0c9d58;$GoogleKeep:#ffbb00;$GooglePlay:#607d8b;$GooglePlayMusic:#ff5722;$GooglePlus:#dc4e41;$Gulp:#da4648;$Html5:#e34f26;$Heroku:#430098;$Hipchat:#205281;$Hootsuite:#000;$Hulu:#66aa33;$IMDB:#e6b91e;$Imgur:#34373c;$Invision:#ff3366;$Instagram:#e4405f;$Instapaper:#1f1f1f;$Intercom:#1f8ded;$JSFiddle:#3fa1f5;$Kickstarter:#2bde73;$Kik:#82bc23;$Lastfm:#d51007;$Launchpad:#f8C300;$Line:#00c300;$LinkedIn:#0077b5;$Livestream:#cF202e;$Mailchimp:#2C9ab7;$Mastercard:#eb001b;$Medium:#00ab6c;$Messenger:#0084ff;$Microsoft:#666;$MicrosoftAccess:#ba141a;$MicrosoftExcel:#217346;$MicrosoftOnenote:#80397b;$MicrosoftOutlook:#0072c6;$MicrosoftPowerpoint:#d24726;$MicrosoftWord:#2b579a;$Myspace:#030303;$Netflix:#e50914;$Onedrive:#094ab2;$Opera:#ff1b2d;$PayPal:#00457c;$Periscope:#40a4c4;$Pinterest:#bd081c;$Pocket:#ef3f56;$Podcasts:#9933cc;$ProductHunt:#da552f;$Protoio:#34a7c1;$Quora:#a82400;$RSS:#ffa500;$Rdio:#008fd5;$React:#00d8ff;$Reddit:#ff4500;$Shopify:#7ab55c;$Sitepoint:#258aaf;$Skype:#00aff0;$Slack:#6ecadc;$Slashdot:#026664;$SmashingMagazine:#e85c33;$SoundCloud:#ff3300;$Spotify:#2ebd59;$StackExchange:#1e5397;$StackOverflow:#fe7a16;$Stripe:#008cdd;$StumbleUpon:#eb4924;$SuperUser:#2eace3;$Ted:#e62b1e;$Tesla:#cc0000;$TravisCI:#39a85b;$Trello:#0079bf;$Tumblr:#36465d;$Twitch:#6441a5;$Twitter:#1da1f2;$Uber:#000;$Ubuntu:#dd4814;$Vimeo:#1ab7ea;$Visa:#142787;$WeChat:#7bb32e;$WhatsApp:#25d366;$Wikipedia:#fff;$Windows:#0078d6;$Wire:#000;$Ycombinator:#f0652f;$Yahoo:#440099;$Yelp:#c41200;$YouTube:#fd0016;$YouTubeMusic:#191919;
+
+
+// Mixins
+//--------------------
+
+@mixin shadow() {
+  box-shadow: 0 1px 3px rgba(black, 0.12), 0 1px 2px rgba(black, 0.24);
+  -webkit-appearance: none;
+}
+
+@mixin shadow-h() {
+  box-shadow: 0 2px 4px rgba(black, 0.28);
+  transition: all 250ms cubic-bezier(0.4,0,0.2,1);
+  -webkit-appearance: none;
+  &:hover, &:focus, &:active {
+    box-shadow: 0 5px 12px rgba(black, 0.3);
+  }
+}
+
+@keyframes appear {
+  0%   { opacity: 0; }
+  10%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+// Main
+//--------------------
 
 body {
-	padding-top: 48px;
-	font-family: $fontfamily;
-	background: $background;
+  font-family: $label-family;
+  font-weight: 400;
+  background-color: $bg;
+  color: #000;
+  padding-bottom: 4rem;
 }
 
 a {
-	color: $blue;
+  img {
+    visibility: visible;
+  }
+  
+  span:first-child {
+    visibility: visible;
+  }
 }
 
-.google__logo {
-	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGgAAAAoCAMAAAAlmk//AAAAflBMVEUAAAA0qFNChfRChfRChfRChfRChfTsUDFChfRChfTqQzXqQzVChfTqQzXqQzXqQzVChfTqQzX7vAXqQzVChfT7vAX7vAX7vAXqQzX7vAX7vAVChfTqQzVChfTqQzX7vAXqQzX7vAXqQzX7vAXqQzU0qFNChfTqQzX7vAU0qFPmKNI6AAAAJnRSTlMAv78ef0XwF5zPYO9gQpm/b97wf9+dZtrPvkczM65vJa5/UTMlOmbv7OIAAALNSURBVFjD7ZbbcqMwDIZVwGDOISEkIZDzkvT9X3Aty1hO2exeZNiZzvS/gbq2P/+SLAI/el9CxoOSJ/fwnn4pwUtl9WDlvYf6+Pz8gBfytRnWYibQviYnQRBIQmazgPwQ9w5881c/DHIeR2gidPKSyXlylCHHB1dzgChwAuYEsSEP/gNI/t3Q4VTdq9Mh4pFmvXksd+eje9froZYCVNUKF5Sc0ntV5EAKVYZeYi7VnZQmQLpuHqTleYy9N94+rF0GdePagk75FDmPleGR7qyEOMuH1Zo43FOeQHlql26nIF6BgznOKpM8KfHlov5/RM6mads1ks72ckgh5DMoSmntBdeu/gHCOQcAY61Sz7U10irk8ki1FPtjVTFohTEDFO5yo73rSehCBHVqxglIhbYUoZ+xJtR7owzxJQxcUGoi1hUpWjLWJ9dVxV3qQ3VAuukDtrQ5SVnagT9ww/IdUEdZpaDfSww71cooXrLQLuwQToezArXjyA7dCbcDxwzKEbRKdcEWN9p00oEILqD8I+jogB4aJGzgXZDRNoncG9tPulJN+bSzdL4a19EGQyfceIQTUJF/bXbSHYjp25fY20PvB7jqoiMd6T3kohVOjiKMmdtPbF16Nnr7WFcsXYWU5kYV1Si2hauJHLmTnKTYrbqTWmDsFEXEKUFTmdpcZP1gkkaxq3B2vsUwmJpeNugHOTuT4iEYOxGDcm0J67XATdgTiz+D0faOqLLSWY3A3FjVUjf6cbWnDL34awsqdMWVW/3obLg8pnAYkUQiDpFIxCGSkRs6IqGIwxL96KYXwEoqmrqyeW03pqXaEUGn7PXtYxDk5fNaZokgEIbC6pLVoQNXx+bctM/3IQtUgv3Jl+12WSU5Y96V75T3HuaSH9S1IfX4CZ1B3LKlPxaFhDnEbSQMFoGubx/m0z4crDKYUfzjJBQws4T0Yq9f+PCjb63fxmmAhQtfgbgAAAAASUVORK5CYII=) no-repeat 5px 3px;
-	width: 130px;
-	height: 40px;
-	display: inline-block;
+.google-logo {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/logo--google.svg?v=2) no-repeat 50% 50%;
+  background-size: 120px 44px;
+  width: 120px;
+  height: 44px;
+  color: $Google;
+  display: block;
+  position: absolute;
+  top: 0.3rem;
+  right: 1.5rem;
+  z-index: 2;
+  
+  a {
+    display: block;
+    width: 120px;
+    height: 44px;
+  }
+  
+  @media screen and (max-width: 530px) {
+    background-position: 0 3px;
+    margin-left: -20px;
+    -webkit-transform: scale(0.6);
+       -moz-transform: scale(0.6);
+        -ms-transform: scale(0.6);
+         -o-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  
+  @media screen and (max-width: 255px) {
+    .google_logo {
+      display: none;
+    }
+  }
 }
 
-.card-block {
-	padding: 1rem;
-	background: $search-background;
+#top {
+  padding-top: 30px;
+  background-color: #fafafa;
+  border-bottom: 1px solid #ebebeb;
 }
+
 
 #search {
-	box-shadow: $boxshadow;
-	border-color: transparent;
-	margin-bottom: 2rem;
+  border-color: transparent;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 632px;
+  height: 44px;
+  
+  @media screen and (max-width: 530px) {
+    padding: 10px;
+    height: 60px;
+    
+    a {
+      max-width: 80px;
+    }
+  }
+  
+  form {
+    display: inline;
+    
+    #GoogleSearch {
+      input {
+        position: relative;
+        line-height: 34px;
+        margin-bottom: 5px;
+        width: 100%;
+        height: 34px;
+        font: 16px arial, sans-serif;
+        padding-left: 16px;
+        border-color: transparent;
+        background-color: $bg;
+        box-shadow: 0 1px 1px rgba(black, 0.1);
+        height: 44px;
+        border-radius: 3px;
+        transition: box-shadow 200ms cubic-bezier(0.4,0.0,0.2,1);
+        &:hover,
+        &:focus {
+          box-shadow: 0 1px 3px rgba(black, 0.2);
+        }
+      }
+      
+      button {
+        display: none;
+        color: #4284f3;
+        background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/icon--microphone.png) no-repeat 50% 50%;
+        background-size: 24px 24px;
+        border-color: transparent;
+        border-radius: 0 2px 2px 0;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        position: absolute;
+        left: -45px;
+        outline: 0;
+        box-shadow: none;
+        z-index: 99;
+      }
+    }
+  }
 }
 
-form {
-	display: inline;
-	margin: 0;
+
+// Menu
+//--------------------
+
+.menu-wrapper {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  top: 15px;
+  right: 10px;
+  z-index: 3;
+  
+  img {
+    width: 34px;
+    height: 60px;
+  }
+  
+  @media screen and (max-width: 900px) {
+    top: -8px;
+    right: -8px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  &:hover .menu {
+    width: 200px;
+    height: 275px;
+    border-radius: 3px;
+    z-index: 999;
+    
+    img {
+      opacity: 0;
+      transition: all 50ms ease-in;
+    }
+    
+    ul {
+      display: block;
+      list-style-type: none;
+      color: white;
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      text-align: center;
+      margin: 5px 0;
+      padding: 0;
+      font-size: 22px;
+      
+      li {
+        transition: all 200ms ease-in;
+        width: 180px;
+        margin: 0 auto;
+        
+        a {
+          font-family: 'Product Sans', $label-family;
+          font-weight: 400;
+          text-decoration: none;
+          display: block;
+          width: 180px;
+          color: #aaa;
+          padding: 7px 0;
+          margin: 5px 0;
+          border-radius: 4px;
+          transition: all 100ms ease-in;
+          
+          &:hover {
+            color: $Google;
+            background-color: #fafafa;
+            @include shadow();
+          }
+          
+          &:focus,
+          &:active {
+            color: #fff;
+            background-color: $Google; 
+          }
+        }
+      }
+    }
+  }
+  
+  .menu {
+    width: 60px;
+    height: 60px;
+    top: 25px;
+    right: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px 0px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    cursor: pointer;
+    z-index: 3;
+    box-shadow: 0 2px 2.5px 0 rgba(black, 0.12), 0 2px 2px 0 rgba(black, 0.24);
+    transition: all 200ms ease-in-out;
+    
+    ul {
+      display: none;
+      animation: appear 1s;
+    }
+    
+    @media screen and (max-width: 900px) {
+      top: -5px;
+      right: -5px;
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      
+      img {
+        width: 25px;
+        height: 43px;
+        margin-left: -3px;
+      }
+    }
+  }
 }
 
-#GoogleSearch {
-	input {
-		border-radius: 0;
-		border-color: $gray;
-		width: 475px;
-		background: $search-background;
-		&:focus {
-			border-color: $blue;
-		}
-	}
-	button {
-		color: white;
-		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAABGUlEQVQoFXWSsU4CQRCGOYwJgeY64gsY3oOSUBMfwwegMCZQmthQ2NJR0FDT2NlQU9jYWICERCUKyPr9ZIcct7eTfJnZf/6ZvctdqeTDOdeEOexBsYUXuDZPYcZwBxYrilf48sIfuRMb1I0K3dTKmjh34QB6mnq2d6wR9aiKdtBEQH86dp0bB30a2voRNLxArwq6fZH3lBEuYJ1v2DlJkg31HqqmWdbwDsL38Q5uVO8SPr10ShqeQQ1T96SeFyN/nJ7LnBhqgD6H3msAFZnIV/AMCn2JNBj2xhua9nNoicwWvxQTWEIvtqCeMX1Tv8MQUngDi0HhgpjI1K1N+vwY8xbqDPVzCx4KjTGR4V5mwSHmi+oM34O+zs8/o2lHs8MgV+EAAAAASUVORK5CYII=) no-repeat 50% 50% $blue;
-		border-color: $blue;
-		border-radius: 0 2px 2px 0;
-		width: 60px;
-		cursor: pointer;
-		&:hover {
-			background-color: $blue2;
-		}
-	}
-}
+
+// Sites
+//--------------------
 
 .sites {
-	display: flex;
-	flex-flow: row wrap;
-	align-content: space-between;
-	justify-content: center;
-	.hidden {
-		display: none;
-	}
+  padding-top: 3rem;
+  color: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  
+  a {
+    color: inherit;
+    font-size: 1.3rem;
+    background: black;
+    border-radius: 4px;
+    width: 188px;
+    height: 120px;
+    margin: 1rem;
+    line-height: 120px;
+    text-align: center;
+    color: $link-color;
+    box-sizing: border-box;
+    display: block;
+    vertical-align: middle;
+    @include shadow-h();
+    
+    span {
+      &:nth-child(1) {
+        font-family: Material-Icons;
+        padding-right: 0;
+        font-size: 55px;
+      }
+      
+      &#title {
+        opacity: 0;
+        position: absolute;
+        font-size: $label-size;
+        font-family: $label-family;
+        font-weight: $label-weight;
+        //text-shadow: 0 0 1px rgba(black, 0.2);
+        text-rendering: optimizeLegibility;
+        transition: all ease-in-out 150ms;
+        position: absolute;
+        top: 77px;
+        left: 0;
+        color: $label-color;
+        width: 188px;
+        height: 1rem;
+        text-align: center;
+        text-shadow: none;
+      }
+    }
+    
+    &:hover span#title {
+      opacity: 1;
+    }
+    
+    img {
+      width: 55px;
+    }
+    
+    + &:nth-child(3n) {
+      page-break-after: always;
+    }
+    
+    &:hover,
+    &:focus,
+    &:active {
+      transform: translateY(-5px);
+      text-decoration: none;
+      color: $link-color;
+    }
+  }
 }
 
-.site {
-	font-size: 1.3rem;
-	background: white;
-	border-radius: 4px;
-	width: 188px;
-	height: 120px;
-	margin: 1rem;
-	line-height: 120px;
-	text-align: center;
-	box-shadow: $boxshadow !important;
-	color: $blue;
-	display: inline-block;
-	vertical-align: middle;
-	-webkit-transform: perspective(1px) translateZ(0);
-	transform: perspective(1px) translateZ(0);
-	box-shadow: 0 0 1px transparent;
-	position: relative;
-	-webkit-transition-duration: 0.3s;
-	transition-duration: 0.3s;
-	-webkit-transition-property: transform;
-	transition-property: transform;
-	span {
-		font-family: FontAwesome;
-		padding-right: 5px;
-		font-size: 50px;
-	}
-	span:nth-child(2) {
-		display: none;
-	}
-	img {
-		mix-blend-mode: multiply;
-		//filter: grayscale(1);
-	}
-	&:nth-child(3n) {
-	  page-break-after: always;
-	}
-	&:before {
-		 pointer-events: none;
-		 position: absolute;
-		 z-index: -1;
-		 content: '';
-		 top: 100%;
-		 left: 5%;
-		 height: 10px;
-		 width: 90%;
-		 opacity: 0;
-		 background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.15) 0%, transparent 80%);
-		 background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.15) 0%, transparent 80%);
-		 -webkit-transition-duration: 0.3s;
-		 transition-duration: 0.3s;
-		 -webkit-transition-property: transform, opacity;
-		 transition-property: transform, opacity;
-	}
-	&:hover, &:focus, &:active {
-	   -webkit-transform: translateY(-5px);
-	   transform: translateY(-5px);
-		text-decoration: none;
-		color: $blue;
-	}
-	&:hover:before, &:focus:before, &:active:before {
-	   opacity: 1;
-	   -webkit-transform: translateY(0px);
-	   transform: translateY(0px);
-	}
+
+// Site Settings
+//--------------------
+
+// Site mixin to turn invert filter on/off
+@mixin site($bg, $filter) {
+  background: $bg;
+  img {
+    filter: invert+unquote('(#{$filter})');
+  }
+}
+
+// Custom site mixin - Custom logo width + filter on/off
+@mixin siteC($bg, $filter, $img-width) {
+  background: $bg;
+  img {
+    filter: invert+unquote('(#{$filter})');
+    width: $img-width;
+  }
 }
 
 
+//    Site    |    Mixin    |    Variable
+//-----------------------------------------------------
+#Amazon       {@include site  ($Amazon, 1)}
+#Apple        {@include site  ($Apple, 1)}
+#Behance      {@include site  ($Behance, 1)}
+#Bootstrap    {@include site  ($Bootstrap, 1)}
+#ChromeStore  {@include siteC ($ChromeStore, 0, 65px)}
+#Codepen      {@include site  ($Codepen, 1)}
+#Dribbble     {@include site  ($Dribbble, 1)}
+#Dropbox      {@include site  ($Dropbox, 1)}
+#Facebook     {@include site  ($Facebook, 1)}
+#Feedly       {@include site  ($Feedly, 1)}
+#Flickr       {@include site  ($Flickr, 1)}
+#Flipboard    {@include site  ($Flipboard, 1)}
+#Firefox      {@include site  ($Firefox, 1)}
+#GitHub       {@include site  ($GitHub, 1)}
+#Google       {@include site  ($Google, 1)}
+#Keep         {@include site  ($GoogleKeep, 0)}
+#GoogleMusic  {@include site  ($GooglePlayMusic, 1)}
+#GooglePlay   {@include site  ($GooglePlay, 1)}
+#Hangouts     {@include site  ($GoogleHangouts, 1)}
+#Heroku       {@include site  ($Heroku, 1)}
+#Hulu         {@include siteC ($Hulu, 1, 75px)}
+#Imgur        {@include siteC ($Imgur, 0, 100px)}
+#Inbox        {@include site  ($Google, 0)}
+#Instagram    {@include site  ($Instagram, 1)}
+#Instapaper   {@include site  ($Instapaper, 1)}
+#JSFiddle     {@include site  ($JSFiddle, 1)}
+#LinkedIn     {@include site  ($LinkedIn, 1)}
+#Medium       {@include site  ($Medium, 1)}
+#Messenger    {@include site  ($Messenger, 0)}
+#Netflix      {@include site  ($Netflix, 1)}
+#OperaAddons  {@include site  ($Opera, 1)}
+#Pinterest    {@include site  ($Pinterest, 1)}
+#Pocket       {@include site  ($Pocket, 1)}
+#ProductHunt  {@include site  ($ProductHunt, 0)}
+#Quora        {@include site  ($Quora, 1)}
+#Reddit       {@include site  ($Reddit, 1)}
+#RSS          {@include site  ($RSS, 1)}
+#Slack        {@include site  ($Slack, 1)}
+#Spotify      {@include site  ($Spotify, 1)}
+#Twitch       {@include site  ($Twitch, 1)}
+#Twitter      {@include site  ($Twitter, 1)}
+#Vimeo        {@include site  ($Vimeo, 1)}
+#Wikipedia    {@include site  ($Wikipedia, 0)}
+#YouTube      {@include siteC ($YouTube, 1, 65px)}
+#YouTubeMusic {@include site  ($YouTubeMusic, 0)}
 
 
+// Sites that need a little extra customization
+//-----------------------------------------------
 
-
-
-
-
-
-
-// Site customizations
-// Font awesome unicode: 
-// http://fontawesome.io/cheatsheet/
-
-#Google {
-	background: $blue;
-	color: white;
-	span:after {
-		content: '\f1a0';
-	}
-}
-
-#Facebook {
-	background: #3B5999;
-	color: white;
-	span:after {
-		content: '\f230';
-	}
-}
-
-#YouTube {
-	background: #E62117;
-	color: white;
-	span:after {
-		content: '\f167';
-	}
-}
-
-#GitHub {
-	background: #111;
-	color: white;
-	span:after {
-		content: '\f09b';
-	}
-}
-
-#Wikipedia {
-	background: white;
-	color: black;
-	span:after {
-		content: '\f266';
-	}
-}
-
-#Reddit {
-	background: #F4400B;
-	color: white;
-	span:after {
-		content: '\f281';
-	}
-}
-
-#Instagram { // from http://codepen.io/katydecorah/pen/PNLePj
-	color: white;
-	background:
-   radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
-   radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
-   radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
-   radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%),
-   radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
-   radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%),
-   radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
-   linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
-	span:after {
-		content: '\f16d';
-	}
-}
-
-#Imgur {
-	background: #2B2B2B;
-	color: #1BB76E;
-	span:after {
-		content: '\f111';
-	}
-}
-
-#Amazon {
-	background: #0B0C07;
-	color: #F99A05;
-	span:after {
-		content: '\f270';
-	}
-}
-
-#ProductHunt {
-	background: #DA552F;
-	color: white;
-	span:after {
-		content: '\f288';
-	}
-}
-
-#Codepen {
-	background: black;
-	color: white;
-	span:after {
-		content: '\f1cb';
-	}
-}
-
-#jsFiddle {
-	background: #3FA1F5;
-	color: white;
-	span:after {
-		content: '\f1cc';
-	}
-}
-
-#Codepad {
-	background: #F35E5C;
-	color: white;
-	span:after {
-		content: '';
-		background: url('https://codepad.co/img/loader-logo.svg') no-repeat;
-		filter: invert(1) brightness(2);
-		width: 50px;
-		height: 50px;
-		top: 45px;
-		right: 68px;
-		position: absolute;
-	}
-}
-
-#Apple {
-	background: #050505;
-	color: white;
-	span:after {
-		content: '\f179';
-	}
-}
-
-#Behance {
-	background: #1769FF;
-	color: white;
-	span:after {
-		content: '\f1b5';
-	}
-}
-
-#Dribbble {
-	background: #E84C88;
-	color: white;
-	span:after {
-		content: '\f17d';
-	}
-}
-
-#ChromeStore {
-	// background-image: repeating-linear-gradient(
-	// 	to bottom right,
-	// 		rgb(251, 188, 5) 0%,
-	// 		rgb(234, 67, 53) 100%
-	// );
-	background: #34A853;
-	color: white;
-	span:after {
-		content: '\f268';
-	} 
-}
-
-#Dribbble {
-	background: #E84C88;
-	color: white;
-	span:after {
-		content: '\f17d';
-	}
-}
-
-#Dropbox {
-	background: #007EE5;
-	color: white;
-	span:after {
-		content: '\f16b';
-	}
-}
-
-#Flickr {
-	background: #0063DC;
-	//background: #ff0084;
-	color: white;
-	span:after {
-		content: '\f16e';
-	}
-}
-
-#FirefoxAddons {
-	background: #C13832;
-	color: white;
-	span:after {
-		content: '\f269';
-	}
-}
-
-#Medium {
-	background: #00AB6C;
-	color: white;
-	span:after {
-		content: '\f23a';
-	}
-}
-
-#Pinterest {
-	background: #BD081C;
-	color: white;
-	span:after {
-		content: '\f0d2';
-	}
-}
-
-#Snapchat {
-	background: #FFFC00;
-	color: white;
-	span:after {
-		content: '\f2ab';
-		text-shadow: 0 0 1px #000;
-	}
-}
-
-#Spotify {
-	background: #2EBD59;
-	color: white;
-	span:after {
-		content: '\f1bc';
-	}
-}
-
-#Slack {
-	background: #6ECADC;
-	//background: #3EB991;
-	color: white;
-	span:after {
-		content: '\f198';
-	}
-}
-
-#Twitch {
-	background: #6441A5;
-	//background: #3EB991;
-	color: white;
-	span:after {
-		content: '\f1e8';
-	}
-}
-
-#Quora {
-	background: #A82400;
-	//background: #3EB991;
-	color: white;
-	span:after {
-		content: '\f2c4';
-	}
+#Instagram {
+  background: 
+  radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
+  radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+  radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+  radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%),
+  radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+  radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%),
+  radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+  linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
 }

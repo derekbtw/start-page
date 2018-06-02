@@ -1,0 +1,206 @@
+- var cdn = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/'
+
+.menu-wrapper
+  .menu
+    img(src=cdn + 'icon--menu.svg')
+    ul
+      mixin li(shortcut)
+        li
+          a(href='https://' + shortcut.toLowerCase() + '.google.com')=shortcut
+          
+      +li('Images')
+      +li('Calendar')
+      +li('Drive')
+      +li('Photos')
+      +li('News')
+      
+.fluid-container
+  .d-flex.justify-content-center#top
+    .col-2
+      span.google-logo
+      a(href='https://www.google.com')
+      
+    .col-6: #search
+      form.form-search.w-100(
+        method='get' 
+        action='https://www.google.com/search' 
+        target='_blank')
+        #GoogleSearch.input-group
+          input.form-control.input-lg(
+            type='search' 
+            name='q' 
+            placeholder='' 
+            autocomplete='off')
+          span.input-group-btn
+            button.btn.btn-secondary(type='submit')
+            
+  .sites
+    mixin app(title, url, icon)
+      a(id=title.replace(/\s/g, ''), href='https://' + url)
+        img(src=cdn + 'logo--' + icon)
+        span#title=title
+        
+    +app('Instagram',
+         'instagram.com',
+         'instagram.svg')
+         
+    +app('Twitter',
+         'twitter.com',
+         'twitter.svg')
+         
+    +app('YouTube',
+         'youtube.com',
+         'youtube.svg')
+         
+    +app('CodePen',
+         'codepen.io',
+         'codepen-white.svg')
+         
+    //+app('Facebook',
+         'facebook.com',
+         'facebook.svg')
+         
+    //+app('Messenger',
+         'messenger.com',
+         'messenger.svg')
+         
+    +app('Inbox',
+         'inbox.google.com',
+         'inbox.svg')
+         
+    +app('GitHub',
+         'github.com',
+         'github.svg')
+         
+    +app('Reddit',
+         'reddit.com',
+         'reddit.svg')
+         
+    +app('Keep',
+         'keep.google.com',
+         'keep.svg')
+         
+    +app('Imgur',
+         'imgur.com',
+         'imgur.svg')
+         
+    //+app('Behance',
+         'behance.net',
+         'behance.svg')
+         
+    +app('Product Hunt',
+         'producthunt.com',
+         'producthunt.svg')
+         
+    +app('YouTube Music',
+         'music.youtube.com',
+         'youtube-music.svg')
+         
+    +app('Chrome Store',
+         'https://goo.gl/CJzpdp',
+         'chromestore.svg')
+         
+    +app('Dribbble',
+         'dribbble.com',
+         'dribbble.svg')
+         
+    //+app('Instapaper',
+         'instapaper.com',
+         'instapaper.svg')
+         
+    //+app('Flipboard',
+         'flipboard.com',
+         'flipboard.svg')
+         
+    +app('Hulu',
+         'hulu.com',
+         'hulu.svg')
+         
+    +app('Netflix',
+         'netflix.com',
+         'netflix.svg')
+         
+    //+app('Feedly',
+         'feedly.com',
+         'feedly.svg')
+         
+    +app('Vimeo',
+         'vimeo.com',
+         'vimeo.svg')
+         
+    +app('Hangouts',
+         'hangouts.google.com',
+         'hangouts.svg')
+         
+    +app('Medium',
+         'medium.com',
+         'medium.svg')
+         
+    +app('Google Music',
+         'music.google.com',
+         'googleplay.svg')
+         
+    //+app('Google',
+         'google.com',
+         'google-icon.svg')
+         
+    //+app('Slack',
+         'slack.com',
+         'slack.svg')
+         
+    +app('Amazon',
+         'amazon.com',
+         'amazon.svg')
+         
+    +app('Twitch',
+         'twitch.tv',
+         'twitch.svg')
+         
+    +app('Dropbox',
+         'dropbox.com',
+         'dropbox.svg')
+         
+    //+app('Wikipedia',
+         'wikipedia.org',
+         'wikipedia.svg')
+         
+    //+app('Apple',
+         'apple.com',
+         'apple.svg')
+         
+    //+app('Pinterest',
+         'pinterest.com',
+         'pinterest.svg')
+         
+    +app('Spotify',
+         'open.spotify.com',
+         'spotify.svg')
+         
+    //+app('LinkedIn',
+         'linkedin.com',
+         'linkedin.svg')
+         
+    //+app('Heroku',
+         'heroku.com',
+         'heroku.svg')
+         
+    //+app('JSFiddle',
+         'jsfiddle.net',
+         'jsfiddle.svg')
+         
+    +app('Quora',
+         'quora.com',
+         'quora.svg')
+         
+    +app('Pocket',
+         'getpocket.com',
+         'pocket.svg')
+         
+    //+app('Bootstrap',
+         'getbootstrap.com',
+         'bootstrap.svg')
+         
+    //+app('Opera Addons',
+         'addons.opera.com',
+         'opera.svg')
+         
